@@ -25,3 +25,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.red {
+    background-color: red;
+}

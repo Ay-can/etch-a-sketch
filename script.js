@@ -9,3 +9,20 @@ function createGrid() {
     }
 }
 createGrid();
+
+// check if a mouse enter a div box
+// check if a mouse leaves a div box
+// when a div box is being entered
+// set the background color to red
+
+const boxes = document.querySelectorAll(".box");
+boxes.forEach((box) => {
+    box.addEventListener("mouseenter", (event) => {
+        console.log("Entered!");
+        event.target.style.backgroundColor = "red";
+    })
+
+    box.addEventListener("mouseleave", (event) => {
+        //
+    })
+})
