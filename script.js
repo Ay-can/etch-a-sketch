@@ -23,6 +23,11 @@ boxes.forEach((box) => {
     })
 
     box.addEventListener("mouseleave", (event) => {
-        //
+        // later    
     })
+
+    box.addEventListener("mousedown", (event) => {
+        event.target.style.backgroundColor = "white";
+    })
+
 })
