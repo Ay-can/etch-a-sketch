@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 function createGrid() {
     const gridSize = 16 * 16;
-    for(let i = 0; i < gridSize; i++) {
+    for (let i = 0; i < gridSize; i++) {
         const div = document.createElement("div");
         div.classList.add("box");
         container.appendChild(div);
@@ -19,15 +19,23 @@ const boxes = document.querySelectorAll(".box");
 boxes.forEach((box) => {
     box.addEventListener("mouseenter", (event) => {
         console.log("Entered!");
-        event.target.style.backgroundColor = "red";
-    })
+        event.target.style.backgroundColor = getRandomColor();
+    });
 
     box.addEventListener("mouseleave", (event) => {
         // later    
-    })
-
-    box.addEventListener("mousedown", (event) => {
-        event.target.style.backgroundColor = "white";
-    })
-
+    });
 })
+
+function getRandomColor() {
+    const hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+    let hexColor = "#";
+
+    for (let i = 0; i < 6; i++) {
+        let hexIndex = Math.floor(Math.random() * hexValues.length);
+        let hexValue = hexValues[hexIndex];
+        hexColor += hexValue;
+    }
+
+    return hexColor;
+}
