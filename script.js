@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const btn = document.querySelector("#btn-grid");
 
 function createGrid() {
     const gridSize = 16 * 16;
@@ -8,12 +9,25 @@ function createGrid() {
         container.appendChild(div);
     }
 }
-createGrid();
+
+function deleteGrid() {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach((box) => {
+        container.removeChild(box);
+    })
+}
+
+btn.addEventListener("click", (event) => {
+    console.log("Clicked!");
+    deleteGrid();    
+})
+
 
 // check if a mouse enter a div box
 // check if a mouse leaves a div box
 // when a div box is being entered
 // set the background color to red
+createGrid();
 
 const boxes = document.querySelectorAll(".box");
 boxes.forEach((box) => {
@@ -39,3 +53,4 @@ function getRandomColor() {
 
     return hexColor;
 }
+
