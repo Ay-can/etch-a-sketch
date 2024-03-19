@@ -16,5 +16,8 @@ body {
     width: 500px;
     height: 500px;
     flex-wrap: wrap;
-    padding: 0;
+}
+
+.border {
+    border: 10px solid;
 }

@@ -1,7 +1,6 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector("#btn-grid");
 
-// First method
 function createGrid(gridSize) {
     for (let i = 0; i < gridSize * gridSize; i++) {
         const div = document.createElement("div");
