@@ -5,8 +5,8 @@ function createGrid(gridSize) {
     for (let i = 0; i < gridSize * gridSize; i++) {
         const div = document.createElement("div");
         //div.style.border = "1px solid black";
-        div.style.width = 500 / gridSize + "px";
-        div.style.height = 500 / gridSize + "px";
+        div.style.width = 400 / gridSize + "px";
+        div.style.height = 400 / gridSize + "px";
         div.style.flex = "auto";
         container.appendChild(div);
     }
@@ -43,6 +43,7 @@ let isRainbow = false;
 const rainbowBtn = document.querySelector("#btn-rainbow");
 rainbowBtn.addEventListener("click", () => {
    isRainbow = true; 
+   isErasing = false;
 });
 
 function drawBox() {
@@ -68,7 +69,3 @@ function getRandomColor() {
 
     return rgb;
 }
-
-// Make site prettier by adding title, background color, and styling buttons
-// Add slider that allows you to pick colors
-// add option to turn off opacity
