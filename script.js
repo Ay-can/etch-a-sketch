@@ -33,12 +33,23 @@ btn.addEventListener("click", (event) => {
     drawBox();
 })
 
+let isErasing = false;
+const eraserBtn = document.querySelector("#btn-eraser");
+eraserBtn.addEventListener("click", () => {
+    isErasing = true;
+});
+
 function drawBox() {
     const boxes = document.querySelectorAll(".container > div");
     boxes.forEach((box) => {
         box.addEventListener("mouseenter", (event) => {
-            event.target.style.backgroundColor = getRandomColor();
-            event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+            if (!isErasing) {
+                event.target.style.backgroundColor = getRandomColor();
+                event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+            } else {
+                event.target.style.backgroundColor = "white";
+                event.target.style.opacity = 1;
+            }
         });
     })
 }
@@ -53,4 +64,5 @@ function getRandomColor() {
 }
 
 // Make site prettier by adding title, background color, and styling buttons
-// Add darkening color effect in javascript
+// Add slider that allows you to pick colors
+// add button that turns random colors on and off
