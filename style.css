@@ -94,3 +94,8 @@ a:hover {
 a:active {
     opacity: 1;
 }
+
+#color-picker {
+    background-color: #5e057e;
+    border: 0;
+}
