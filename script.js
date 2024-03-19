@@ -48,7 +48,7 @@ function drawBox() {
   const boxes = document.querySelectorAll(".container > div");
   boxes.forEach((box) => {
     box.addEventListener("mouseenter", (event) => {
-      if (!isErasing && isRainbow && !isColorPicking) {
+      if (!isErasing && isRainbow) {
         event.target.style.backgroundColor = getRandomColor();
         event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
       } else {
