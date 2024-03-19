@@ -33,35 +33,24 @@ btn.addEventListener("click", (event) => {
     drawBox();
 })
 
-
-// check if a mouse enter a div box
-// check if a mouse leaves a div box
-// when a div box is being entered
-// set the background color to red
 function drawBox() {
     const boxes = document.querySelectorAll(".container > div");
     boxes.forEach((box) => {
         box.addEventListener("mouseenter", (event) => {
-            console.log("Entered!");
             event.target.style.backgroundColor = getRandomColor();
-        });
-
-        box.addEventListener("mouseleave", (event) => {
-            // later    
+            event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
         });
     })
 }
 
 function getRandomColor() {
-    const hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-    let hexColor = "#";
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    const rgb = `rgb(${red},${green}, ${blue})`;    
 
-    for (let i = 0; i < 6; i++) {
-        let hexIndex = Math.floor(Math.random() * hexValues.length);
-        let hexValue = hexValues[hexIndex];
-        hexColor += hexValue;
-    }
-
-    return hexColor;
+    return rgb;
 }
 
+// Make site prettier by adding title, background color, and styling buttons
+// Add darkening color effect in javascript
