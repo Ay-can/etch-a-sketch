@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -9,23 +13,8 @@ body {
 
 .container {
     display: flex;
-    width: 720px;
-    height: 720px;
+    width: 500px;
+    height: 500px;
     flex-wrap: wrap;
-    margin: 0;
     padding: 0;
-    border: 10px solid salmon;
-}
-
-.box {
-    height: 41px;
-    width: 40px;
-    border: 2px solid black;
-    flex: auto;
-    margin: 0;
-    padding: 0;
-}
-
-.red {
-    background-color: red;
 }
