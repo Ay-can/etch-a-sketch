@@ -4,7 +4,7 @@ const btn = document.querySelector("#btn-grid");
 function createGrid(gridSize) {
     for (let i = 0; i < gridSize * gridSize; i++) {
         const div = document.createElement("div");
-        div.style.border = "1px solid black";
+        //div.style.border = "1px solid black";
         div.style.width = 500 / gridSize + "px";
         div.style.height = 500 / gridSize + "px";
         div.style.flex = "auto";
@@ -71,4 +71,4 @@ function getRandomColor() {
 
 // Make site prettier by adding title, background color, and styling buttons
 // Add slider that allows you to pick colors
-// add button that turns random colors on and off
+// add option to turn off opacity
