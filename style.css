@@ -33,7 +33,8 @@ body {
 
 .second-half {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     align-items: center;
     flex-direction: column;
     background-color: #5e057e;
@@ -47,8 +48,6 @@ body {
     font-size: 48px;
     font-weight: 700;
     color: #c299d0;
-    border-radius: 10px;
-    border: 2px solid #c299d0;
     padding: 0px 40px;
     margin: 0px;
 }
@@ -68,6 +67,30 @@ button {
     box-shadow: 10px 5px 5px #c299d0;
 }
 
-button:active {
+button:hover {
     opacity: 0.1;
+}
+
+button:active {
+    opacity: 1;
+}
+
+#credit {
+    font-size: 22px;
+    font-weight: 500;
+    color: #c299d0;
+}
+
+a {
+    text-decoration: none;
+    color: #c299d0; 
+    font-weight: 900;
+}
+
+a:hover {
+    opacity: 0.1;
+}
+
+a:active {
+    opacity: 1;
 }

@@ -39,7 +39,7 @@ eraserBtn.addEventListener("click", () => {
     isErasing = true;
 });
 
-let isRainbow = false;
+let isRainbow = true;
 const rainbowBtn = document.querySelector("#btn-rainbow");
 rainbowBtn.addEventListener("click", () => {
    isRainbow = true; 
