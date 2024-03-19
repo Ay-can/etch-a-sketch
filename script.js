@@ -39,11 +39,17 @@ eraserBtn.addEventListener("click", () => {
     isErasing = true;
 });
 
+let isRainbow = false;
+const rainbowBtn = document.querySelector("#btn-rainbow");
+rainbowBtn.addEventListener("click", () => {
+   isRainbow = true; 
+});
+
 function drawBox() {
     const boxes = document.querySelectorAll(".container > div");
     boxes.forEach((box) => {
         box.addEventListener("mouseenter", (event) => {
-            if (!isErasing) {
+            if (!isErasing && isRainbow) {
                 event.target.style.backgroundColor = getRandomColor();
                 event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
             } else {
