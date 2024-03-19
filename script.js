@@ -55,7 +55,7 @@ function drawBox() {
                 event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
             } else {
                 event.target.style.backgroundColor = "white";
-                event.target.style.opacity = 1;
+                event.target.style.opacity = 0;
             }
         });
     })
