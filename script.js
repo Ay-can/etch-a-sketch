@@ -89,15 +89,18 @@ function drawBox() {
   const boxes = document.querySelectorAll(".container > div");
   boxes.forEach((box) => {
     box.addEventListener("mouseenter", (event) => {
-      if (!isErasing && isRainbow) {
-        event.target.style.backgroundColor = getRandomColor();
-        event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
-      } else if (isColorPicking) {
-        event.target.style.backgroundColor = colorValue;
-        event.target.style.opacity = 1;
-      } else {
-        event.target.style.backgroundColor = "white";
-        event.target.style.opacity = 0;
+      // If mouse is being pressed
+      if (event.buttons === 1) {
+        if (!isErasing && isRainbow) {
+          event.target.style.backgroundColor = getRandomColor();
+          event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+        } else if (isColorPicking) {
+          event.target.style.backgroundColor = colorValue;
+          event.target.style.opacity = 1;
+        } else {
+          event.target.style.backgroundColor = "white";
+          event.target.style.opacity = 0;
+        }
       }
     });
   });
