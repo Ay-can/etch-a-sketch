@@ -1,15 +1,16 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector("#btn-grid");
+const gridSizeText = document.querySelector("#grid-size-text");
 
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize * gridSize; i++) {
     const div = document.createElement("div");
-    //div.style.border = "1px solid black";
     div.style.width = 400 / gridSize + "px";
     div.style.height = 400 / gridSize + "px";
     div.style.flex = "auto";
     container.appendChild(div);
   }
+  gridSizeText.innerText = `${gridSize} x ${gridSize}`;
 }
 
 function deleteGrid() {
@@ -19,9 +20,9 @@ function deleteGrid() {
   });
 }
 
-btn.addEventListener("click", (event) => {
-  let gridSize = prompt("Enter a number between 10 and 100");
-  if (gridSize < 10 || gridSize > 100) {
+btn.addEventListener("click", () => {
+  let gridSize = prompt("Enter a number between 4 and 100");
+  if (gridSize < 4 || gridSize > 100) {
     alert("Enter a number between 10 and 100!");
     return;
   }
@@ -107,7 +108,6 @@ function getRandomColor() {
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
   const rgb = `rgb(${red},${green}, ${blue})`;
-
   return rgb;
 }
 
@@ -117,4 +117,3 @@ function init() {
 }
 
 init();
-// Refactor code

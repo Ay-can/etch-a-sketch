@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="first-half">
-            <h2>Options</h2>
-        <div class="main-buttons">
-    <button id="btn-grid">Change Grid</button>
-    <button id="btn-eraser">Eraser</button>
-    <button id="btn-reset">Reset Sketch</button>
-    <button id="btn-change-grid">Toggle Grid</button>
-        </div>
-            <h2>Extra's</h2>
-        <div class="extra-buttons">
-    <button id="btn-rainbow">Rainbow</button>
-    <input id="color-picker" type="color"></input>
-        </div>
+      <h2>Options</h2>
+      <div class="main-buttons">
+        <button id="btn-grid">Change Grid</button>
+        <button id="btn-eraser">Eraser</button>
+        <button id="btn-reset">Reset Sketch</button>
+        <button id="btn-change-grid">Toggle Grid</button>
+        <button id="btn-rainbow">Rainbow</button>
+        <input id="color-picker" type="color" />
+      </div>
     </div>
     <div class="second-half">
-        <p id="title">Etch a Sketch</p>
-    <div class="border">
-    <div class="container"></div>
+      <p id="title">Etch a Sketch</p>
+      <div class="sketch-board">
+        <p id="grid-size-text">16 x 16</p>
+        <div class="border">
+          <div class="container"></div>
+        </div>
+      </div>
+      <div id="credit">
+        Created by
+        <a
+          href="https://github.com/Ay-can"
+          target="_blank"
+          rel="noopener noreferer"
+          >Ay-can</a
+        >
+      </div>
     </div>
-    <div id="credit">Created by <a href="https://github.com/Ay-can" target="_blank" rel="noopener noreferer">Ay-can</a></div>
-    </div>
-</body>
+  </body>
 </html>

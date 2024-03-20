@@ -79,8 +79,9 @@ button:active {
 
 .main-buttons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
   border-radius: 10px;
   padding: 20px;
 }
@@ -115,9 +116,19 @@ a:active {
 #color-picker {
   background-color: #5e057e;
   border: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
 }
 
 h2 {
   margin-bottom: 0;
   color: #5e057e;
+}
+
+#grid-size-text {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #c299d0;
 }
