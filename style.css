@@ -24,6 +24,7 @@ body {
 .first-half {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #c299d0;

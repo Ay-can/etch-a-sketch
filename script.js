@@ -63,6 +63,27 @@ resetBtn.addEventListener("click", () => {
   });
 });
 
+const changeGridBtn = document.querySelector("#btn-change-grid");
+let isGridOn = false;
+changeGridBtn.addEventListener("click", () => {
+  if (!isGridOn) {
+    isGridOn = true;
+  } else {
+    isGridOn = false;
+  }
+
+  const boxes = document.querySelectorAll(".container > div");
+  if (isGridOn) {
+    boxes.forEach((box) => {
+      box.style.border = "1px solid black";
+    });
+  } else {
+    boxes.forEach((box) => {
+      box.style.border = "none";
+    });
+  }
+});
+
 function drawBox() {
   const boxes = document.querySelectorAll(".container > div");
   boxes.forEach((box) => {
@@ -96,3 +117,4 @@ function init() {
 }
 
 init();
+// Refactor code
