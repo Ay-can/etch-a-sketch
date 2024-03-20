@@ -54,6 +54,15 @@ colorPicker.addEventListener("input", (event) => {
   colorValue = event.target.value;
 });
 
+const resetBtn = document.querySelector("#btn-reset");
+resetBtn.addEventListener("click", () => {
+  const boxes = document.querySelectorAll(".container > div");
+  boxes.forEach((box) => {
+    box.style.backgroundColor = "white";
+    box.style.opacity = 0.1;
+  });
+});
+
 function drawBox() {
   const boxes = document.querySelectorAll(".container > div");
   boxes.forEach((box) => {
@@ -87,4 +96,3 @@ function init() {
 }
 
 init();
-// Add color picker
