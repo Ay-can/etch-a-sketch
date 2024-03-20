@@ -35,6 +35,7 @@ let isErasing = false;
 const eraserBtn = document.querySelector("#btn-eraser");
 eraserBtn.addEventListener("click", () => {
   isErasing = true;
+  isColorPicking = false;
 });
 
 let isRainbow = true;
@@ -44,6 +45,15 @@ rainbowBtn.addEventListener("click", () => {
   isErasing = false;
 });
 
+let isColorPicking = false;
+let colorValue;
+const colorPicker = document.querySelector("#color-picker");
+colorPicker.addEventListener("input", (event) => {
+  isColorPicking = true;
+  isRainbow = false;
+  colorValue = event.target.value;
+});
+
 function drawBox() {
   const boxes = document.querySelectorAll(".container > div");
   boxes.forEach((box) => {
@@ -51,6 +61,9 @@ function drawBox() {
       if (!isErasing && isRainbow) {
         event.target.style.backgroundColor = getRandomColor();
         event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+      } else if (isColorPicking) {
+        event.target.style.backgroundColor = colorValue;
+        event.target.style.opacity = 1;
       } else {
         event.target.style.backgroundColor = "white";
         event.target.style.opacity = 0;
