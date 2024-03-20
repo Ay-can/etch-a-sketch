@@ -32,11 +32,19 @@ btn.addEventListener("click", () => {
   drawBox();
 });
 
+// Refactor all these buttons, find a better way to keep track
+// of which buttons are currently active
 let isErasing = false;
 const eraserBtn = document.querySelector("#btn-eraser");
 eraserBtn.addEventListener("click", () => {
   isErasing = true;
   isColorPicking = false;
+  if (isErasing) {
+    eraserBtn.style.opacity = 0.1;
+    rainbowBtn.style.opacity = 1;
+  } else {
+    eraserBtn.style.opacity = 1;
+  }
 });
 
 let isRainbow = true;
@@ -44,6 +52,11 @@ const rainbowBtn = document.querySelector("#btn-rainbow");
 rainbowBtn.addEventListener("click", () => {
   isRainbow = true;
   isErasing = false;
+  if (isRainbow) {
+    eraserBtn.style.opacity = 1;
+    colorPicker.style.opacity = 1;
+    rainbowBtn.style.opacity = 0.1;
+  }
 });
 
 let isColorPicking = false;
@@ -53,6 +66,8 @@ colorPicker.addEventListener("input", (event) => {
   isColorPicking = true;
   isRainbow = false;
   colorValue = event.target.value;
+  eraserBtn.style.opacity = 1;
+  colorPicker.style.opacity = 1;
 });
 
 const resetBtn = document.querySelector("#btn-reset");

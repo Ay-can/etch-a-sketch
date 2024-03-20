@@ -83,10 +83,11 @@ button:active {
   align-items: center;
   gap: 14px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 0px 20px 20px;
+  margin-bottom: 0;
 }
 
-.extra-buttons {
+.active-options {
   display: flex;
   align-items: center;
   gap: 8px;
